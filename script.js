@@ -6,19 +6,29 @@
   const navbar = document.querySelector(".container");
   if (!navBtn || !navbar) return;
 
-  navBtn.addEventListener("click", () => {
+  function closeNav() {
+    navbar.classList.remove("nav-open");
+    navBtn.setAttribute("aria-expanded", "false");
+  }
+
+  navBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
     const isOpen = navbar.classList.toggle("nav-open");
     navBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 
-  // Close nav when a link is clicked on mobile
-  navbar.querySelectorAll(".content a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navbar.classList.remove("nav-open");
-      navBtn.setAttribute("aria-expanded", "false");
-    });
+  // Close when any link in the drawer is clicked
+  navbar.querySelectorAll(".nav-drawer a, .content a").forEach((link) => {
+    link.addEventListener("click", closeNav);
+  });
+
+  // Close on outside click
+  document.addEventListener("click", (e) => {
+    if (!navbar.contains(e.target)) closeNav();
   });
 })();
+
+
 
 /* ═══════════════════════════════════════════════════════════════
    FAQ – accordion toggle

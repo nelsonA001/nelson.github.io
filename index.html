@@ -17,10 +17,41 @@
 
     <!-- ─── Navbar ─────────────────────────────────────────────────── -->
     <nav class="container" id="navbar" aria-label="Main navigation">
-        <div class="img1">
-            <img src="./imgs/CLAINEL_LOGO_edit.svg" alt="Clainel logo">
+
+        <!-- Fixed-height top bar: logo | links | CTA | toggle -->
+        <div class="nav-bar">
+            <div class="img1">
+                <a href="#Home">
+                    <img src="./imgs/CLAINEL_LOGO_edit.svg" alt="Clainel logo">
+                </a>
+            </div>
+
+            <!-- Desktop links -->
+            <div class="content">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Features">Features</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#Case-Study">Case Study</a></li>
+                    <li><a href="#FAQ">FAQ</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Desktop CTA -->
+            <div class="nav-cta">
+                <a href="#Contact">Get Started &rsaquo;</a>
+            </div>
+
+            <!-- Hamburger / Close toggle -->
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fi fi-rr-menu-burger nav-icon-open"></i>
+                <i class="fi fi-rr-cross nav-icon-close"></i>
+            </button>
         </div>
-        <div class="content" id="nav-menu">
+
+        <!-- Mobile slide-down drawer -->
+        <div class="nav-drawer" id="nav-drawer">
             <ul>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#Features">Features</a></li>
@@ -28,12 +59,12 @@
                 <li><a href="#Case-Study">Case Study</a></li>
                 <li><a href="#FAQ">FAQ</a></li>
                 <li><a href="#Contact">Contact</a></li>
+                <li class="mobile-cta-li"><a href="#Contact" class="mobile-cta-link">Get Started &rsaquo;</a></li>
             </ul>
         </div>
-        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <i class="fi fi-rr-menu-burger"></i>
-        </button>
+
     </nav>
+
 
     <!-- ─── Hero ───────────────────────────────────────────────────── -->
     <section id="Home">

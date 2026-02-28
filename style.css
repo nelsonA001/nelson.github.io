@@ -230,33 +230,54 @@ span {
 /* ═══════════════════════════════════════════════════════════════
    NAVBAR
 ═══════════════════════════════════════════════════════════════ */
+
+/* Outer nav strip – sticky bar */
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 999;
   width: 100%;
-  max-height: 80px;
-  padding: 0 32px;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.07),
+    0 4px 16px rgba(0, 0, 0, 0.06);
+  /* Do NOT set height or flex here – the inner .nav-bar handles that */
 }
 
+/* Inner row that constrains the logo / links / CTA / toggle to 76px */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+  padding: 0 40px;
+  gap: 16px;
+}
+
+/* ── Logo ── */
 .img1 {
-  width: 110px;
-  order: 1;
+  width: 116px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.img1 a {
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+}
+.img1 img {
+  width: 100%;
+  height: auto;
 }
 
+/* ── Desktop links (centre) ── */
 .content {
   display: flex;
   align-items: center;
-  order: 2;
   flex: 1;
   justify-content: center;
 }
@@ -265,81 +286,241 @@ span {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
 }
 
 .content a {
+  position: relative;
   color: var(--clr-text);
   font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
-  padding: 6px 14px;
+  padding: 7px 15px;
   border-radius: 50px;
-  transition:
-    background var(--transition),
-    color var(--transition);
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+.content a::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: calc(100% - 30px);
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+  transition: transform 0.25s ease;
 }
 .content a:hover {
-  background: rgba(96, 70, 180, 0.08);
   color: var(--clr-primary);
 }
+.content a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
 
-.nav-toggle {
-  display: none;
-  order: 3;
-  background: var(--clr-dark);
+/* ── Desktop CTA button ── */
+.nav-cta {
+  flex-shrink: 0;
+}
+.nav-cta a {
+  display: inline-block;
+  padding: 9px 22px;
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
   color: #fff;
-  border: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 3px 14px rgba(96, 70, 180, 0.35);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+.nav-cta a::after {
+  display: none !important;
+}
+.nav-cta a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(96, 70, 180, 0.45);
+}
+
+/* ── Hamburger button (hidden on desktop) ── */
+.nav-toggle {
+  display: none; /* hidden on desktop */
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: 1.5px solid rgba(96, 70, 180, 0.25);
   border-radius: var(--radius-sm);
-  padding: 8px 12px;
+  color: var(--clr-dark);
   font-size: 1.1rem;
   cursor: pointer;
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+}
+.nav-toggle:hover {
+  background: rgba(96, 70, 180, 0.06);
+  border-color: var(--clr-primary);
+}
+
+/* Icon swap – always scoped to the button itself */
+.nav-icon-open,
+.nav-icon-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
 }
-
-.container.nav-open {
-  max-height: none;
+.nav-icon-close {
+  display: none;
+} /* X hidden by default */
+.container.nav-open .nav-icon-open {
+  display: none;
 }
-.container.nav-open .content {
+.container.nav-open .nav-icon-close {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  flex-basis: 100%;
-  order: 3;
-  padding: 12px 0 16px;
-  background: rgba(247, 247, 251, 0.98);
-}
-.container.nav-open .content ul {
-  flex-direction: column;
-  width: 100%;
-}
-.container.nav-open .content a {
-  display: block;
-  width: 100%;
-  padding: 12px 20px;
-  border-radius: 0;
 }
 
+/* ── Mobile drawer ── */
+.nav-drawer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  background: #fff;
+  border-top: 1px solid rgba(96, 70, 180, 0.08);
+  transition:
+    max-height 0.36s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.28s ease;
+}
+.container.nav-open .nav-drawer {
+  max-height: 460px;
+  opacity: 1;
+}
+
+.nav-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0 12px;
+}
+.nav-drawer ul li {
+  width: 100%;
+}
+
+.nav-drawer a {
+  display: block;
+  padding: 13px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(96, 70, 180, 0.05);
+  transition:
+    background var(--transition),
+    color var(--transition),
+    padding-left var(--transition);
+}
+.nav-drawer ul li:last-child a {
+  border-bottom: none;
+}
+.nav-drawer a:hover {
+  background: rgba(96, 70, 180, 0.06);
+  color: var(--clr-primary);
+  padding-left: 32px;
+}
+
+/* Mobile CTA pill inside drawer */
+.mobile-cta-li {
+  padding: 12px 20px 4px;
+}
+.mobile-cta-link {
+  display: inline-block !important;
+  padding: 11px 28px !important;
+  background: linear-gradient(
+    135deg,
+    var(--clr-primary),
+    var(--clr-accent)
+  ) !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  border-bottom: none !important;
+  box-shadow: 0 4px 14px rgba(96, 70, 180, 0.35);
+}
+.mobile-cta-link:hover {
+  padding-left: 28px !important;
+  box-shadow: 0 6px 20px rgba(96, 70, 180, 0.45) !important;
+}
+
+/* ── Responsive breakpoints ── */
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .content {
-    display: none;
-  }
-  .container {
+  .nav-bar {
+    height: 68px;
     padding: 0 20px;
   }
+  .nav-toggle {
+    display: inline-flex;
+  }
+  .nav-cta {
+    display: none;
+  } /* desktop CTA hidden */
+  .content {
+    display: none;
+  } /* desktop link list hidden */
 }
 
 @media (min-width: 769px) {
-  .nav-toggle {
+  .nav-drawer {
     display: none;
-  }
-  .container {
-    flex-wrap: nowrap;
+  } /* drawer never shows on desktop */
+}
+
+/* ── Logo link: remove underline / colour ── */
+.img1 a {
+  display: block;
+  line-height: 0;
+}
+
+/* ── Mobile-only CTA in drawer ── */
+.mobile-cta-li {
+  padding: 14px 20px 6px !important;
+  border-bottom: none !important;
+}
+.mobile-cta-link {
+  display: inline-block !important;
+  width: auto !important;
+  padding: 11px 28px !important;
+  background: linear-gradient(
+    135deg,
+    var(--clr-primary),
+    var(--clr-accent)
+  ) !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  border-bottom: none !important;
+  box-shadow: 0 4px 14px rgba(96, 70, 180, 0.35);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition) !important;
+}
+.mobile-cta-link:hover {
+  transform: translateY(-2px) !important;
+  padding-left: 28px !important; /* override the indent effect on hover */
+  box-shadow: 0 6px 20px rgba(96, 70, 180, 0.45) !important;
+}
+
+/* Hide mobile CTA on desktop */
+@media (min-width: 769px) {
+  .mobile-cta-li {
+    display: none !important;
   }
 }
 
