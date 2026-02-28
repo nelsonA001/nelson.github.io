@@ -3,254 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clainel – Partner with us to design, build, and scale AI solutions that drive measurable business outcomes and competitive advantage.">
+    <title>Clainel | Intelligent AI Solutions</title>
+
+    <!-- Flaticon Icon CDN -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css">
+
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/f9854382f1.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <title>Clainel website</title>
 </head>
 <body>
-        <!-- Navbar -->
-        <div class="container">
-            <div class="img1"><img src="./CLAINEL LOGO edit.svg" alt="logo"></div>
-            <div class="content">
+
+    <!-- ─── Navbar ─────────────────────────────────────────────────── -->
+    <nav class="container" id="navbar" aria-label="Main navigation">
+        <div class="img1">
+            <img src="./imgs/CLAINEL_LOGO_edit.svg" alt="Clainel logo">
+        </div>
+        <div class="content" id="nav-menu">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Features">Features</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Case-Study">Case Study</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fi fi-rr-menu-burger"></i>
+        </button>
+    </nav>
+
+    <!-- ─── Hero ───────────────────────────────────────────────────── -->
+    <section id="Home">
+        <div class="grid-container">
+            <div class="home-text">
+                <h1>Transform Your Business with <span>Intelligent AI Solutions</span></h1>
+                <p>We partner with enterprises to design, build, and scale AI solutions that drive measurable business outcomes and competitive advantage.</p>
+                <a href="#Services" class="btn-primary">Explore &rsaquo;</a>
+            </div>
+            <div class="home-image">
+                <!-- hero image placeholder -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Trusted Companies ──────────────────────────────────────── -->
+    <section id="Leading-Companies">
+        <div class="leading-companies">
+            <h2>Trusted by <span>Leading Companies Worldwide</span></h2>
+            <div class="company-logos">
+                <img src="./imgs/LOGO_1.svg" alt="Company 1">
+                <img src="./imgs/LOGO_2.svg" alt="Company 2">
+                <img src="./imgs/LOGO_3.svg" alt="Company 3">
+                <img src="./imgs/LOGO_4.svg" alt="Company 4">
+                <img src="./imgs/LOGO_5.svg" alt="Company 5">
+                <img src="./imgs/LOGO_6.svg" alt="Company 6">
+                <img src="./imgs/LOGO_7.svg" alt="Company 7">
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Features ──────────────────────────────────────────────── -->
+    <section id="Features">
+        <div class="features">
+            <div class="generalf">
+                <div class="feature-image">
+                    <img src="./imgs/ad.jpg" alt="AI features illustration">
+                </div>
+                <div class="feature-text">
+                    <h2>Why Leading Companies <span>Choose Us</span></h2>
+                    <p>We combine deep technical expertise with strategic business acumen to deliver AI solutions that create lasting competitive advantages.</p>
+
+                    <ul class="feature-list">
+                        <li><i class="fi fi-sr-check-circle feature-check"></i> Real-time data processing with up to 99.98% accuracy</li>
+                        <li><i class="fi fi-sr-check-circle feature-check"></i> Autonomous document classification and extraction</li>
+                        <li><i class="fi fi-sr-check-circle feature-check"></i> Automated customer support with human-like comprehension</li>
+                        <li><i class="fi fi-sr-check-circle feature-check"></i> Seamless integration with your existing tools</li>
+                    </ul>
+
+                    <div class="feature-btns">
+                        <button class="btn-store"><i class="fi fi-brands-apple"></i> Available on Apple</button>
+                        <button class="btn-store"><i class="fi fi-brands-android"></i> Available on Android</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Services ──────────────────────────────────────────────── -->
+    <section id="Services">
+        <div class="pricing">
+            <h2 class="section-title">Our <span>Services</span></h2>
+            <p class="section-subtitle">Tailored AI capabilities to fit every stage of your transformation journey.</p>
+            <div class="pricing-cards">
+
+                <div class="card">
+                    <div class="card-icon icon-purple">
+                        <i class="fi fi-rr-brain"></i>
+                    </div>
+                    <h3>AI Strategy Consulting</h3>
+                    <p class="card-desc">Develop a comprehensive AI roadmap aligned with your business objectives and market opportunities.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon icon-yellow">
+                        <i class="fi fi-rr-settings"></i>
+                    </div>
+                    <h3>Custom AI Development</h3>
+                    <p class="card-desc">Build tailored machine learning solutions that solve your specific business challenges.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon icon-green">
+                        <i class="fi fi-rr-chart-line-up"></i>
+                    </div>
+                    <h3>Predictive Analytics</h3>
+                    <p class="card-desc">Leverage advanced analytics to forecast trends, optimize operations, and drive growth.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon icon-pink">
+                        <i class="fi fi-rr-shield-check"></i>
+                    </div>
+                    <h3>AI Governance &amp; Ethics</h3>
+                    <p class="card-desc">Implement responsible AI frameworks that ensure compliance and build stakeholder trust.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon icon-purple">
+                        <i class="fi fi-rr-bolt"></i>
+                    </div>
+                    <h3>Process Automation</h3>
+                    <p class="card-desc">Streamline workflows with intelligent automation that reduces costs and boosts efficiency.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon icon-yellow">
+                        <i class="fi fi-rr-users"></i>
+                    </div>
+                    <h3>AI Training &amp; Enablement</h3>
+                    <p class="card-desc">Upskill your teams with hands-on training to maximize your AI investments.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Case Study / Proven Results ───────────────────────────── -->
+    <section id="Case-Study">
+        <div class="Study">
+            <h2 class="section-title">Proven <span>Results</span></h2>
+            <p class="section-subtitle">Real impact from real engagements. See how our AI solutions have transformed businesses across industries.</p>
+
+            <div class="case-studies">
+
+                <div class="case-card card1">
+                    <div class="case-tag">Retail</div>
+                    <h3>Retail Giant Boosts Sales</h3>
+                    <p>By implementing our AI-driven recommendation engine, a leading retailer increased online sales by 25% and improved customer engagement.</p>
+                    <div class="case-metric"><span>25%</span> Increase in Sales</div>
+                    <button class="sdbtn">Read Case Study <i class="fi fi-rr-angle-right"></i></button>
+                </div>
+
+                <div class="case-card card2">
+                    <div class="case-tag">Finance</div>
+                    <h3>Financial Institution Reduces Fraud</h3>
+                    <p>Our predictive analytics solution helped a major bank reduce fraudulent transactions by 40%, saving millions annually.</p>
+                    <div class="case-metric"><span>40%</span> Reduction in Fraud</div>
+                    <button class="sdbtn">Read Case Study <i class="fi fi-rr-angle-right"></i></button>
+                </div>
+
+                <div class="case-card card3">
+                    <div class="case-tag">Healthcare</div>
+                    <h3>Healthcare Provider Improves Patient Outcomes</h3>
+                    <p>Using our custom AI models, a healthcare provider enhanced diagnostic accuracy and personalized treatment plans.</p>
+                    <div class="case-metric"><span>30%</span> Improvement in Patient Outcomes</div>
+                    <button class="sdbtn">Read Case Study <i class="fi fi-rr-angle-right"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FAQ ───────────────────────────────────────────────────── -->
+    <section id="FAQ">
+        <div class="faq">
+            <h2 class="section-title">Frequently <span>Asked Questions</span></h2>
+            <p class="section-subtitle">Everything you need to know before getting started.</p>
+
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>What is your refund policy?</span>
+                        <i class="fi fi-rr-angle-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer a 30-day money-back guarantee on all our plans. If you're not satisfied within the first 30 days, you can request a full refund — no questions asked.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>Can I change my pricing plan later?</span>
+                        <i class="fi fi-rr-angle-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can upgrade or downgrade your plan at any time from your account settings. Changes take effect immediately with prorated billing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>Do you offer discounts for students or non-profits?</span>
+                        <i class="fi fi-rr-angle-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer special discounts for students and non-profit organizations. Please contact our support team with valid proof of eligibility to unlock these discounts.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>How long does an AI implementation project take?</span>
+                        <i class="fi fi-rr-angle-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Project timelines vary depending on scope and complexity. A typical engagement ranges from 4 to 16 weeks. We'll provide a detailed roadmap during the initial discovery phase.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>What industries do you serve?</span>
+                        <i class="fi fi-rr-angle-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We serve clients across finance, healthcare, retail, logistics, education, and more. Our solutions are industry-agnostic and fully customizable to your domain needs.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Contact ───────────────────────────────────────────────── -->
+    <section id="Contact">
+        <div class="contact">
+            <div class="contact-info">
+                <h2>Let's Build Something <span>Extraordinary</span></h2>
+                <p class="contact-sub">Reach out and one of our AI specialists will get back to you within 24 hours.</p>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon"><i class="fi fi-rr-phone-call"></i></div>
+                    <div>
+                        <p class="detail-label">Call us for instant support</p>
+                        <p class="detail-value">+234 709 5667 890</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon"><i class="fi fi-rr-envelope"></i></div>
+                    <div>
+                        <p class="detail-label">Write us an email</p>
+                        <p class="detail-value">clainel.org@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon"><i class="fi fi-rr-marker"></i></div>
+                    <div>
+                        <p class="detail-label">Our headquarters</p>
+                        <p class="detail-value">123 Main Street, Lagos, Nigeria</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrap">
+                <form class="contact-form" action="#" novalidate>
+                    <div class="form-group">
+                        <label for="contact-name">Full Name</label>
+                        <input id="contact-name" type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input id="contact-email" type="email" placeholder="john@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input id="contact-subject" type="text" placeholder="How can we help?">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message <i class="fi fi-rr-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Footer ────────────────────────────────────────────────── -->
+    <footer id="Footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="./imgs/CLAINEL_LOGO_edit.svg" alt="Clainel logo" class="footer-logo">
+                <p>Empowering enterprises with intelligent AI solutions that drive real, measurable outcomes.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fi fi-brands-facebook"></i></a>
+                    <a href="#" aria-label="X / Twitter"><i class="fi fi-brands-twitter-alt"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fi fi-brands-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fi fi-brands-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Services</h4>
                 <ul>
-                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Services">AI Strategy</a></li>
+                    <li><a href="#Services">Custom AI Dev</a></li>
+                    <li><a href="#Services">Predictive Analytics</a></li>
+                    <li><a href="#Services">Process Automation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
                     <li><a href="#Features">Features</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#Case-Study">Case Study</a></li>
+                    <li><a href="#Case-Study">Case Studies</a></li>
                     <li><a href="#FAQ">FAQ</a></li>
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
             </div>
-            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <i class="fa-solid fa-bars" style="color:white;font-size:24px;"></i>
-            </button>
+
+            <div class="footer-newsletter">
+                <h4>Stay in the Loop</h4>
+                <p>Get the latest AI insights delivered to your inbox.</p>
+                <div class="newsletter-row">
+                    <input type="email" placeholder="your@email.com" aria-label="Email for newsletter">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
         </div>
-        
-        <!-- Home -->
-        <section id="Home">
-            <div class="grid-container">
-                <div class="home-text">
-                    <h1>Transform Your Business with <span>Intelligent AI Solutions</span>
-                    </h1>
-                    <p>We partner with enterprises to design, build, and scale AI solutions that drive measurable business outcomes and
-                    competitive advantage.</p>
-                    <button>Explore &#8250;</button>
-                </div>
-                <div class="home-image">
-                    <!-- <img src="./teach.jpg" alt="home-image"> -->
-                </div>
-            </div>
-        </section>
-        
-        <!-- LEADING COMPANIES -->
-        <section id="Leading-Companies">
-            <div class="leading-companies">
-                <h2>Trusted by <span>Leading Companies Worldwide</span></h2>
-                <div class="company-logos">
-                    <img src="./LOGO1 (1).svg" alt="company1">
-                    <img src="./LOGO1 (2).svg" alt="company2">
-                    <img src="./LOGO1 (3).svg" alt="company3">
-                    <img src="./LOGO1 (4).svg" alt="company4">
-                    <img src="./LOGO1 (5).svg" alt="company5">
-                    <img src="./LOGO1 (6).svg" alt="company4">
-                    <img src="./LOGO1 (7).svg" alt="company5">
-                </div>
-            </div>
 
-        <!-- Features -->
-        <section id="Features">
-            <div class="features">
-                <div class="generalf">
-                    <div class="feature-image">
-                        <img src="./ad.jpg" alt="feature-image">
-                    </div>
-                    <div class="feature-text">
-                        <h1>Why Leading Companies <span>Choose Us</span>
-                        </h1>
-                        <p>
-                        We combine deep technical expertise with strategic business acumen to deliver AI solutions that create lasting
-                        competitive advantages.
-                        </p>
-                        <p><i class="fa-solid fa-check"></i> Real-time data processing with up to 99.98% accuracy </p>
-                        <p><i class="fa-solid fa-check"></i>Autonomous document classification and extraction</p>
-                        <p><i class="fa-solid fa-check"></i>Automated customer support with human-like comprehension</p>
-                        <p><i class="fa-solid fa-check"></i>Seamless integration with your existing tools</p>
-                        <button> <i class="fa-brands fa-apple"></i> Available on Apple</button>
-                        <button><i class="fa-brands fa-android" style="color: #ffffff;"></i>Available on Andriod</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services -->
-        <section id="Services">
-            <div class="pricing">
-                <h1>Our <span>Services</span></h1>
-                <div class="pricing-cards">
-                    <div class="card">
-<svg xmlns="http://www.w3.org/2000/svg" height="58px" viewBox="0 -960 960 960" width="58px" fill="white" style="background-color: #e7e2f8 ; border-radius: 10px; padding: 10px; margin-bottom: 10px; :hover {color: white;}" class="brain">
-    <path
-        d="M385.16-104q-50.16 0-86.66-35T254-220q-66-1-111.5-48T97-385q0-28 9-54t27-49q-10-17-14.5-36.03T114-565q0-61 41-106t99-53q5-52 42.08-87.5T386-847q29 0 51.15 10.04T480-808q21-18 42.5-28.5T573-847q50.77 0 88.39 36Q699-775 704-724q59 7 101 51.38 42 44.39 42 107.62 0 21.23-5.5 40.11Q836-506 828-489q16 23 26 52t10 56q0 69.89-46 115.45Q772-220 707-220q-9 46-46 81t-86.17 35q-29.59 0-51.21-9.03T480-142q-22 20-43.62 29-21.63 9-51.22 9ZM517-720v490q0 21.52 17.51 37.26Q552.02-177 576.14-177q23.66 0 40.69-19.96Q633.86-216.92 636-239q-18-7-32.79-18.43Q588.43-268.87 577-284q-10-13-6.89-27.33 3.1-14.34 15.89-23.67 12-9 26.71-6.53Q627.43-339.05 637-327q11.2 16.58 28.99 25.79t39.36 9.21Q741-292 766-316.24q25-24.23 25-64.76 0-12-3.67-24.5Q783.67-418 780-432q-20 14-42.8 21-22.8 7-47.2 7-15.03 0-25.51-10.48Q654-424.96 654-439.98T664.49-466q10.48-11 25.51-11 34.64 0 59.32-25.68T774-565.5q0-34.5-25.5-59.5T691-653q-11 24-29.19 42.5Q643.63-592 620-583q-15 6-28.64-.33Q577.71-589.67 573-605q-5-15 1.5-28.5T595-652q16.03-4.87 26.51-21.76Q632-690.66 632-711.13q0-25.87-17.54-44.37-17.54-18.5-40.5-18.5T534-757.97q-17 16.03-17 37.97Zm-73 490v-490q0-21.94-17.04-37.97-17.04-16.03-41-16.03-22.96 0-40.46 18.24t-17.5 44.7q0 21.06 9.55 37.18Q347.09-657.75 363-653q15 5 21.5 18.5T386-607q-6 14.8-20 21.4-14 6.6-28 1.6-24-8-42-26.5T267-653q-32 5-56 29.14-24 24.13-24 58.91 0 36.59 23.94 62.27Q234.89-477 270-477q15.45 0 26.23 10.77Q307-455.45 307-440q0 15.02-10.77 25.51Q285.45-404 270-404q-24.4 0-47.2-7-22.8-7-41.8-20-5 11-8 23t-3 24q0 40.53 24.39 66.26Q218.77-292 253.8-292q20.2 0 38.2-9.5 18-9.5 31-25.5 9-12 23.5-14.5t27 6.5q12.5 9 15.5 24t-6 27q-12 15-27 26.5T325-239q1 22 18.1 42t41.56 20q24.34 0 41.84-15.74Q444-208.48 444-230Zm36-245Z" />
-</svg>
-                        <h2>AI Strategy Consulting</h2>
-                        <p class="price">Develop a comprehensive AI roadmap aligned with your business objectives and market opportunities.</p>
-                    </div>
-                    <div class="card">
-<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#fffff"
-    style="background-color: #f6cd7b ; border-radius: 10px; padding: 10px; margin-bottom: 10px;"class="seet">
-    <path
-        d="m377-64-21-130q-16-6-35.31-16.73Q301.38-221.45 287-233l-122 55L61-364l109-81.16q-1-6.77-1.5-17.64-.5-10.87-.5-19.2 0-7.46.5-17.52.5-10.07 1.5-18.48L61-598l104-185 120 55q14-11 34-22.5t37-17.5l21-129h207l20 129q17 6 37.5 17.5T675-728l121-55 104 185-111 79q1 9 2 20t1 19q0 8-1 18.5t-1 18.5l109 79-104 186-122-55q-14 11-33 22.5T605-194L584-64H377Zm59-73h88.21l14.04-113q33.75-8 63.66-25.08 29.92-17.09 55.27-41.92L762-271l40-72-93-69q4-16.64 7-33.96 3-17.33 3-35.19 0-17.85-2.5-34.35T710-550l92-68-39-72-106 45q-23-26-53.07-44.29-30.08-18.3-66.33-23.71L525-824h-90l-13 111q-36 8-66.5 25.5T302-645l-103.72-45L157-618l93 69q-4 18-6.5 34.5t-2.5 32.98q0 16.52 2.5 33.52 2.5 17 6.5 36l-93 69 41 72 105-46q26 26 56 43t63 25l14 112Zm43-200q59.8 0 101.9-42.06 42.1-42.06 42.1-101.8 0-59.74-42.1-101.94Q538.8-625 479-625q-60 0-102 42.06t-42 101.8q0 59.74 42 101.94Q419-337 479-337Zm1-144Z" />
-</svg>
-                        <h2>Custom AI Development</h2>
-                        <p class="price">Build tailored machine learning solutions that solve your specific business challenges.</p>
-                    </div>
-                    <div class="card">
-<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#fffff"
-    style="background-color: #d4f5e1 ; border-radius: 10px; padding: 10px; margin-bottom: 10px;" class="settings">
-    <path d="m123-209-56-56 312-311 161 162 303-338 51 50-354 398-161-160-256 255Z" />
-</svg>
-                        <h2>Predictive Analytics</h2>
-                        <p class="price">Leverage advanced analytics to forecast trends, optimize operations, and drive growth.</p>
-                    </div>
-                    <div class="card">
-<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#fffff"
-    style="background-color: #f8d4ee ; border-radius: 10px; padding: 10px; margin-bottom: 10px;" class="shield">
-    <path
-        d="M480.02-64Q334-99 239.5-232.06 145-365.11 145-522.93v-248.65L480-898l335 126.42v248.22Q815-365 720.52-232T480.02-64Zm-.02-75q115-39 188.5-145.5T742-523.21V-721.1L480-820l-262 98.9v197.89Q218-391 291.5-284.5T480-139Zm0-341Z" />
-</svg>
-                        <h2>AI Governance & Ethics</h2>
-                        <p class="price">Implement responsible AI frameworks that ensure compliance and build stakeholder trust.</p>
-                    </div>
-                    <div class="card">
-<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#ffffff"
-    style="background-color: #e7e2f8 ; border-radius: 10px; padding: 10px; margin-bottom: 10px;" class="bolt">
-    <path
-        d="m403-181 264-319H493l34-267-239 346h149l-34 240ZM313-68l40-280H148l377-545h91l-40 320h246L403-68h-90Zm165-406Z" />
-</svg>
-                        <h2>Process Automation</h2>
-                        <p class="price">Streamline workflows with intelligent automation that reduces costs and boosts efficiency.
-                        </p>
-                    </div>
-                    <div class="card">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#black" style="background-color: #f6cd7b ; border-radius: 10px; padding: 10px; margin-bottom: 10px;" class="person">
-                        <path
-                            d="M9-130v-109q0-39.01 18.69-69.36t53.35-45.66Q156-387 217.47-402q61.47-15 126.53-15t126.03 15Q531-387 606-354q33.81 15.02 53.41 45.45Q679-278.11 679-239v109H9Zm733 0v-111q0-62-31.5-107T625-422q75 9 141 25.5t108.88 38.94q35.96 20.33 56.54 50.44Q952-277 952-241v111H742ZM344-485q-72.55 0-118.27-45.72Q180-576.45 180-648.5q0-72.05 45.73-118.28Q271.45-813 343.5-813t118.27 46.11Q508-720.77 508-649q0 72.55-46.11 118.28Q415.77-485 344-485Zm402-164q0 72.55-46.1 118.28Q653.8-485 582.04-485q-14.04 0-31.54-2t-30.5-7q25-28.41 37.5-67.61 12.5-39.19 12.5-87.1 0-47.9-12.5-85.09Q545-771 520-804q13.75-3.75 31-6.38 17.25-2.62 31-2.62 71.77 0 117.89 46.11Q746-720.77 746-649ZM82-203h524v-36q0-16-8.33-30.17Q589.35-283.35 577-288q-74-32-125-44t-108.5-12q-57.5 0-109 12T110-288q-12.35 4.65-20.18 18.83Q82-255 82-239v36Zm261.71-355Q383-558 409-583.71q26-25.71 26-65T408.88-714q-26.13-26-65.42-26-39.29 0-64.88 26.12Q253-687.75 253-648.46q0 39.29 25.71 64.88 25.71 25.58 65 25.58Zm.29 355Zm0-446Z" />
-                    </svg>
-                        <h2>AI Training & Enablement</h2>
-                        <p class="price">Upskill your teams with hands-on training to maximize your AI investments.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Case Study -->
-        <section id="Case-Study">
-            <div class="Study">
-                <h1>Proven <span>Results</span></h1>
-                <p>Real impact from real engagements. See how our AI solutions have transformed businesses across industries.</p>
-                <div class="case-studies">
-                    <div class="case-study">
-                        <div class="card1">
-                        <h2>Retail Giant Boosts</h2>
-                        <p>By implementing our AI-driven recommendation engine, a leading retailer increased online sales by 25% and improved customer engagement.</p>
-                        <h3><span>25%</span> Increase in Sales</h3>
-                        <button class="sdbtn">Read Case Study <i class="fa-solid fa-angle-right"></i></button>
-                        </div>
-                    </div>
-                    <div class="case-study">
-                        <div class="card2">
-                        <h2>Financial Institution Reduces Fraud</h2>
-                        <p>Our predictive analytics solution helped a major bank reduce fraudulent transactions by 40%, saving millions annually.</p>
-                        <h3><span>40%</span> Reduction in Fraud</h3>
-                        <button class="sdbtn">Read Case Study <i class="fa-solid fa-angle-right"></i></button>
-                        </div>
-                    </div>
-                    <div class="case-study">
-                        <div class="card3">
-                        <h2>Healthcare Provider Improves Patient Outcomes</h2>
-                        <p>Using our custom AI models, a healthcare provider enhanced diagnostic accuracy and personalized treatment plans, leading to better patient outcomes.</p>
-                        <h3><span>30%</span> Improvement in Patient Outcomes</h3>
-                        <button class="sdbtn">Read Case Study <i class="fa-solid fa-angle-right"></i></button>
-                        </div>
-                    </div>    
-                </div>            
-            </div>
-        </section>
-        
-        <!-- FAQ -->
-        <section id="FAQ">
-            <div class="faq">
-                <h1>Frequently <span>Asked Questions</span></h1>
-                <div class="faq-item">
-                    <h2 class="dropdown">What is the refund policy?</h2>
-                    <p>We offer a 30-day money-back guarantee on all our pricing plans. If you're not satisfied with our service
-                        within the first 30 days, you can request a full refund.</p>
-                </div>
-                <div class="faq-item">
-                    <h2 class="dropdown">Can I change my pricing plan later?</h2>
-                    <p>Yes, you can upgrade or downgrade your pricing plan at any time. Simply go to your account settings and
-                        select the plan that best suits your needs.</p>
-                </div>
-                <div class="faq-item">
-                    <h2 class="dropdown">Do you offer discounts for students or non-profits?</h2>
-                    <p>Yes, we offer special discounts for students and non-profit organizations. Please contact our support
-                        team with valid proof of eligibility to avail of these discounts.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contact -->
-        <section id="Contact">
-            <div class="contact">
-                <div class="information">
-                    <h1>Reach out us today <br> via any of the given <br> information</h1><br>
-                    <p>Call us for instant support</p>
-                    <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i> +234 709 5667 890</p>
-                    <p>Write us an email </p>
-                    <p><i class="fa-solid fa-message" style="color: #fafcff;"></i> clainel.org@gmail.com</p>
-                </div>
-                <div class="contact-details">
-                    <form action="#">
-                        <input type="text" placeholder="Name" required><br>
-                        <input type="email" placeholder="Email" required><br>
-                        <textarea placeholder="Message" required></textarea><br>
-                        <button type="submit">Submit &#8250;</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Footer -->
-        <section id="Footer">
-            <div class="footer">
-                <div class="subscribe">
-                    <h2>Subscribe to our newsletter</h2>
-                    <input type="email" placeholder="Enter your email">
-                    <button type="submit">Subscribe &#8250;</button>
-                </div>
-                <div class="address">
-                    <h2>
-                        Our Address
-                    </h2>
-                    <p>123 Main Street, City, Country</p>
-                    <p>&copy;clainel All rights reserved.</p>
-                </div>
-                <div class="contactf">
-                    <h2>Contact Us</h2>
-                    +234 9030 567 890<br>
-                    <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
-                    <i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i>
-                    <i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i>
-                </div>
-                <div class="services">
-                    <h2>Our Services</h2>
-                    <p><a href="#">Pricing</a></p>
-                    <p><a href="#">Features</a></p>
-                    <p><a href="#">FAQ</a></p>
-                </div>
-            </div>
-        </section>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Clainel. All rights reserved.</p>
+            <p>123 Main Street, Lagos, Nigeria</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
