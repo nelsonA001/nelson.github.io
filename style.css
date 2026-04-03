@@ -1,3 +1,4 @@
+
 /* ═══════════════════════════════════════════════════════════════
    NUNITO FONT — local
 ═══════════════════════════════════════════════════════════════ */
@@ -97,6 +98,36 @@
   font-weight: 900;
   font-style: italic;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+     Montserrat FONT — local
+═══════════════════════════════════════════════════════════════ */
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("./fonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("./fonts/Montserrat/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("./fonts/Montserrat/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url("./fonts/Montserrat/Montserrat-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Semibold";
+  src: url("./fonts/Montserrat/Montserrat-Semibold.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Black";
+  src: url("./fonts/Montserrat/Montserrat-Black.ttf");
+}
+
 
 /* ═══════════════════════════════════════════════════════════════
    DESIGN TOKENS
@@ -961,6 +992,11 @@ span {
   transition:
     gap var(--transition),
     color var(--transition);
+}
+
+.sdbtn a {
+  text-decoration: none;
+  color: inherit;
 }
 .sdbtn:hover {
   gap: 10px;
