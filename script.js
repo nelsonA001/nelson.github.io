@@ -67,6 +67,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ═══════════════════════════════════════════════════════════════
+   FAQ – show more toggle
+═══════════════════════════════════════════════════════════════ */
+document.addEventListener("DOMContentLoaded", () => {
+  const showMoreBtn = document.getElementById("show-more-faq");
+  if (!showMoreBtn) return;
+
+  const faqItems = document.querySelectorAll(".faq-item");
+  const extraItems = Array.from(faqItems).slice(6); // Items after the first 6
+
+  showMoreBtn.addEventListener("click", () => {
+    const isExpanded = showMoreBtn.classList.contains("expanded");
+
+    if (isExpanded) {
+      // Hide items
+      extraItems.forEach(item => item.classList.add("hidden"));
+      showMoreBtn.innerHTML = 'Show More FAQs <i class="fi fi-rr-angle-down"></i>';
+      showMoreBtn.classList.remove("expanded");
+    } else {
+      // Show items
+      extraItems.forEach(item => item.classList.remove("hidden"));
+      showMoreBtn.innerHTML = 'Show Less FAQs <i class="fi fi-rr-angle-down"></i>';
+      showMoreBtn.classList.add("expanded");
+    }
+  });
+});
+
+/* ═══════════════════════════════════════════════════════════════
    LOGO CAROUSEL – seamless infinite scroll
 ═══════════════════════════════════════════════════════════════ */
 document.addEventListener("DOMContentLoaded", () => {

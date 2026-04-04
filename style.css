@@ -1105,6 +1105,41 @@ span {
   line-height: 1.7;
 }
 
+.hidden {
+  display: none;
+}
+
+.show-more-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 24px;
+  background: var(--clr-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition);
+  margin: 14px 0;
+}
+
+.show-more-btn:hover {
+  background: var(--clr-muted);
+}
+
+.show-more-btn i {
+  transition: transform 0.3s ease;
+}
+
+.show-more-btn.expanded i {
+  transform: rotate(180deg);
+}
+
 /* ═══════════════════════════════════════════════════════════════
    CONTACT
 ═══════════════════════════════════════════════════════════════ */
@@ -1308,8 +1343,6 @@ span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-brand {
-}
 
 .footer-logo {
   width: 120px;
@@ -1406,6 +1439,11 @@ span {
 }
 .newsletter-row input::placeholder {
   color: rgba(255, 255, 255, 0.35);
+}
+
+.newsletter-form {
+  background: transparent;
+  border: none;
 }
 
 .newsletter-row button {
