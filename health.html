@@ -169,10 +169,14 @@
             <div class="footer-newsletter">
                 <h4>Stay in the Loop</h4>
                 <p>Get the latest AI insights delivered to your inbox.</p>
-                <div class="newsletter-row">
-                    <input type="email" placeholder="your@email.com" aria-label="Email for newsletter">
-                    <button type="submit">Subscribe</button>
-                </div>
+                <form class="newsletter-form" action="https://formspree.io/f/xwvrgonv" method="POST" novalidate>
+                    <div class="newsletter-row">
+                        <label for="newsletter"></label>
+                        <input type="email" id="newsletter" name="Email" placeholder="your@email.com" aria-label="Email for newsletter"
+                            required>
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
             </div>
         </div>
 
