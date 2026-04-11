@@ -628,7 +628,7 @@ span {
 
 /* ── HOME ── */
 .home {
-    height: 100vh;
+    height: 90vh;
     padding: 0 20px;
     background:
         radial-gradient(circle at 20% 30%,
@@ -637,7 +637,6 @@ span {
         radial-gradient(circle at 80% 70%,
             rgba(220, 17, 135, 0.06) 0%,
             transparent 55%);
-    margin-bottom: 80px;
 }
 
 .homeTop {
@@ -679,18 +678,18 @@ span {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
-    margin: 40px 20px;
+    margin: 40px 40px;
     justify-content: center;
     align-items: center;
 }
 
 .homeOver img {
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     border-radius: var(--radius-lg);
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     height: 100%;
-    max-height: 450px;
+    max-height: 500px;
 }
 
 .homeOver h2 {
@@ -712,7 +711,7 @@ span {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 42px;
-    margin: 50px 20px 20px 50px;
+    margin: 50px 20px;
 }
 
 .mid1 p {
