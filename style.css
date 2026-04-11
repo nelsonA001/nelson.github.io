@@ -558,18 +558,20 @@ span {
 /* ═══════════════════════════════════════════════════════════════
    HOME / HERO
 ═══════════════════════════════════════════════════════════════ */
-#Home {
-  background:
-    radial-gradient(
-      circle at 20% 30%,
-      rgba(96, 70, 180, 0.07) 0%,
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(220, 17, 135, 0.06) 0%,
-      transparent 55%
-    );
+.hero {
+  background-image: url('./imgs/Industries.jpg');
+  position: relative;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc( 100vh - 10vh);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgb(255, 255, 255, 0.8), rgba(188, 188, 188, 0.9) 60%, rgba(255, 255, 255, 0.8), rgb(239, 239, 239));
 }
 
 .grid-container {
@@ -583,6 +585,7 @@ span {
 
 .home-text {
   max-width: 760px;
+  position: relative;
 }
 
 .home-text h1 {
@@ -595,7 +598,7 @@ span {
 
 .home-text p {
   font-size: 1.15rem;
-  color: var(--clr-muted);
+  color: var(--clr-text);
   max-width: 580px;
   margin: 0 auto 40px;
 }
@@ -1033,6 +1036,7 @@ span {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  position: relative;
 }
 
 .faq-item {
@@ -1110,26 +1114,29 @@ span {
 }
 
 .show-more-btn {
-  width: 100%;
+  width: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  background-color: transparent;
+  border-radius: none;
   padding: 16px 24px;
-  background: var(--clr-primary);
-  color: white;
+  color: var(--clr-primary);
   border: none;
-  border-radius: var(--radius-md);
   font-family: var(--font);
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
   transition: background-color var(--transition);
-  margin: 14px 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 100%;
+  margin-top: 20px;
 }
 
 .show-more-btn:hover {
-  background: var(--clr-muted);
+  color: var(--clr-primary-lt);
 }
 
 .show-more-btn i {
