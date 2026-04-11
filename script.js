@@ -67,29 +67,43 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ═══════════════════════════════════════════════════════════════
-   FAQ – show more toggle
+  FAQ – pagination
 ═══════════════════════════════════════════════════════════════ */
 document.addEventListener("DOMContentLoaded", () => {
   const showMoreBtn = document.getElementById("show-more-faq");
   if (!showMoreBtn) return;
 
   const faqItems = document.querySelectorAll(".faq-item");
-  const extraItems = Array.from(faqItems).slice(6); // Items after the first 6
+  const itemsPerPage = 6;
+  let currentPage = 0;
+  const totalPages = Math.ceil(faqItems.length / itemsPerPage);
+
+  function showPage(page) {
+    faqItems.forEach((item, index) => {
+      const start = page * itemsPerPage;
+      const end = start + itemsPerPage;
+      if (index >= start && index < end) {
+        item.classList.remove("hidden");
+      } else {
+        item.classList.add("hidden");
+      }
+    });
+    if (page < totalPages - 1) {
+      showMoreBtn.innerHTML = 'Next <i class="fi fi-rr-angle-right"></i>';
+    } else {
+      showMoreBtn.innerHTML = 'Back <i class="fi fi-rr-angle-left"></i>';
+    }
+  }
+
+  showPage(currentPage);
 
   showMoreBtn.addEventListener("click", () => {
-    const isExpanded = showMoreBtn.classList.contains("expanded");
-
-    if (isExpanded) {
-      // Hide items
-      extraItems.forEach(item => item.classList.add("hidden"));
-      showMoreBtn.innerHTML = 'Show More FAQs <i class="fi fi-rr-angle-down"></i>';
-      showMoreBtn.classList.remove("expanded");
+    if (currentPage >= totalPages - 1) {
+      currentPage = 0;
     } else {
-      // Show items
-      extraItems.forEach(item => item.classList.remove("hidden"));
-      showMoreBtn.innerHTML = 'Show Less FAQs <i class="fi fi-rr-angle-down"></i>';
-      showMoreBtn.classList.add("expanded");
+      currentPage++;
     }
+    showPage(currentPage);
   });
 });
 
