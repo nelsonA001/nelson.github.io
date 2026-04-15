@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clainel.com.ng/sitemap.xml
