@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document
     .querySelectorAll(
-      "section, .card, .case-card, .faq-item, .feature-text, .feature-image, .contact-info, .contact-form-wrap",
+      ".fade-in, .reveal, section, .card, .case-card, .faq-item, .feature-text, .feature-image, .contact-info, .contact-form-wrap",
     )
     .forEach((el) => {
       el.classList.add("fade-in");
